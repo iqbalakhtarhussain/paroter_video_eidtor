@@ -122,7 +122,7 @@ class MainEditorBottombar extends StatelessWidget {
                                 textAlign: TextAlign.center,
                               ),
                               Text(
-                                "Otherwise, trim it to under one minute",
+                                "Otherwise, trim it to under one minute.",
                                 textAlign: TextAlign.center,
                               ),
                             ])),
