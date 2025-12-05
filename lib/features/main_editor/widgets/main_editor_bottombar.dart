@@ -7,6 +7,8 @@ import '/shared/widgets/flat_icon_text_button.dart';
 import '../controllers/main_editor_controllers.dart';
 import '../services/sizes_manager.dart';
 
+import 'package:nb_utils/nb_utils.dart' as Platform;
+
 /// A widget representing the bottom bar for the main editor, providing access
 /// to various editing tools like paint, text, crop, filters, and more.
 class MainEditorBottombar extends StatelessWidget {
@@ -102,7 +104,7 @@ class MainEditorBottombar extends StatelessWidget {
             scrollbarOrientation: ScrollbarOrientation.top,
             thickness: isDesktop ? null : 0,
             child: BottomAppBar(
-                height: 185,
+                height: 200,
                 color: configs.mainEditor.style.bottomBarBackground,
                 padding: EdgeInsets.zero,
                 child: Column(
@@ -116,14 +118,23 @@ class MainEditorBottombar extends StatelessWidget {
                               Text(
                                 "Videos longer then one minute are charged at \$1 to cover storage costs",
                                 textAlign: TextAlign.center,
+                                style: Platform.isAndroid
+                                    ? TextStyle(fontSize: 11)
+                                    : TextStyle(),
                               ),
                               Text(
                                 "If your video exceeeds one minute in length and you want to upload it in full, top up \$1 to your wallet, which can be found in the App Settings",
                                 textAlign: TextAlign.center,
+                                style: Platform.isAndroid
+                                    ? TextStyle(fontSize: 11)
+                                    : TextStyle(),
                               ),
                               Text(
                                 "Otherwise, trim it to under one minute.",
                                 textAlign: TextAlign.center,
+                                style: Platform.isAndroid
+                                    ? TextStyle(fontSize: 11)
+                                    : TextStyle(),
                               ),
                             ])),
                     Center(
